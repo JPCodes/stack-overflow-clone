@@ -3,8 +3,7 @@
 <% if @questions.length >= 1 %>
 <ul>
 <% @questions.each do |question| %>
-  <li><%= link_to truncate(question.description, length: 15), question_path(question) %></li>
-  <li>asked <%= time_ago_in_words(question.created_at) %> ago</li>
+  <li><%= link_to truncate(question.description, length: 15), question_path(question) %> asked <%= time_ago_in_words(question.created_at) %> ago by <%= User.find(question.user_id).email %></li>
 <% end %>
 </ul>
 <% else %>

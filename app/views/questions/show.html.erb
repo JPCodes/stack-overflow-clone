@@ -6,14 +6,26 @@
 <p>
   Asked by: <%= @question.user.email %>
 </p>
+<% if current_user %>
+  <% if @question.user_id == current_user.id %>
+  <%= link_to 'Edit Question', edit_user_question_path(current_user, @question) %>
+  <%= link_to 'Delete Question', user_question_path(current_user, @question), method: :delete %>
+  <% end %>
+<% end %>
 <hr>
 
-<%= render 'answers/form' %>
+<% if current_user %>
+  <%= render 'answers/form' %>
+<% else %>
+  <p>
+    Login to answer this question.
+  </p>
+<% end %>
 
 <% @question.answers.each do |answer| %>
   <% author_user = User.find(answer.user_id) %>
   <p>
-    Author: <%= author_user.email %> | 
+    Author: <%= author_user.email %> |
     Author ID: <%= answer.user_id %>
   </p>
   <p>

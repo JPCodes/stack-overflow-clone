@@ -1,5 +1,6 @@
 class QuestionsController < ApplicationController
   before_action :set_user, only: [:create, :edit, :update, :destroy]
+  skip_before_action :authenticate_user!, only: [:show]
 
   def show
     @question = Question.find(params[:id])
@@ -20,9 +21,23 @@ class QuestionsController < ApplicationController
   end
 
   def edit
+    @question = Question.find(params[:id])
   end
 
   def update
+    @question = Question.find(params[:id])
+    if @question.update(question_params)
+      redirect_to question_path(@question)
+    else
+      flash[:notice] = "Edit unsuccessful"
+     render :edit
+    end
+  end
+
+  def destroy
+    @question = Question.find(params[:id])
+    @question.destroy
+    redirect_to root_path
   end
 
   private
