@@ -1,0 +1,9 @@
+
+<ul>
+<% @users.each do |user| %>
+  <p>
+    <%= user.email %>, <%= link_to 'Delete User', user_path(user), method: :delete, :data => {:confirm => "Delete this user?"} %>
+  </p>
+  <hr>
+<% end %>
+</ul>
