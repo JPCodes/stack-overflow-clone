@@ -1,9 +1,9 @@
 <h1>Home</h1>
 
-<% if @questions.length > 1 %>
+<% if @questions.length >= 1 %>
 <ul>
-<%= @questions.each do |question| %>
-  <li><%= truncate(question.description, length: 10) %></li>
+<% @questions.each do |question| %>
+  <li><%= link_to truncate(question.description, length: 15), question_path(question) %></li>
 <% end %>
 </ul>
 <% else %>
