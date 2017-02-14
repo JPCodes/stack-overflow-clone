@@ -1,3 +1,4 @@
 class Question < ActiveRecord::Base
-  # validate :description, :presence => true
+  belongs_to :user
+  validates :description, :presence => true
 end
