@@ -603,6 +603,27 @@
       ],
       "/Users/Guest/Desktop/stack-overflow-clone/app/controllers/answers_controller.rb": [
         1,
+        1,
+        0,
+        0,
+        0,
+        null,
+        null,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        null,
+        0,
+        0,
+        null,
+        null,
+        null,
+        1,
+        1,
+        0,
         null,
         null
       ],
@@ -610,6 +631,10 @@
         1,
         1,
         null,
+        1,
+        0,
+        0,
+        null,
         null,
         1,
         0,
@@ -619,7 +644,6 @@
         0,
         0,
         0,
-        0,
         null,
         0,
         null,
@@ -632,6 +656,10 @@
         null,
         null,
         1,
+        1,
+        0,
+        null,
+        null,
         1,
         0,
         null,
@@ -663,6 +691,7 @@
         null
       ],
       "/Users/Guest/Desktop/stack-overflow-clone/app/models/question.rb": [
+        1,
         1,
         1,
         1,
@@ -703,6 +732,6 @@
         null
       ]
     },
-    "timestamp": 1487100717
+    "timestamp": 1487110889
   }
 }

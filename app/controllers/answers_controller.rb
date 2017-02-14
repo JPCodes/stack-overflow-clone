@@ -6,7 +6,6 @@ class AnswersController < ApplicationController
   end
 
   def create
-    puts "heyheheyheyheyh",current_user
     @user = User.find(current_user.id)
     @question = Question.find(params[:question_id])
     @answer = @question.answers.new(answer_params)

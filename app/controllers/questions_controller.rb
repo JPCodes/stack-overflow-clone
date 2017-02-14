@@ -1,5 +1,5 @@
 class QuestionsController < ApplicationController
-  before_action :set_user, only: [:edit, :update, :destroy]
+  before_action :set_user, only: [:create, :edit, :update, :destroy]
 
   def show
     @question = Question.find(params[:id])
