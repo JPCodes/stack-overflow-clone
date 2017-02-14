@@ -13,7 +13,8 @@
 <% @question.answers.each do |answer| %>
   <% author_user = User.find(answer.user_id) %>
   <p>
-    Author: <%= author_user.email %>
+    Author: <%= author_user.email %> | 
+    Author ID: <%= answer.user_id %>
   </p>
   <p>
     <%= answer.description %>
