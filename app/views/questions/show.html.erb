@@ -7,3 +7,16 @@
   Asked by: <%= @question.user.email %>
 </p>
 <hr>
+
+<%= render 'answers/form' %>
+
+<% @question.answers.each do |answer| %>
+  <% author_user = User.find(answer.user_id) %>
+  <p>
+    Author: <%= author_user.email %>
+  </p>
+  <p>
+    <%= answer.description %>
+  </p>
+  <hr>
+<% end %>

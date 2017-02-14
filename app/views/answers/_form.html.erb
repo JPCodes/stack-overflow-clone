@@ -1,0 +1,8 @@
+<h3>Add Answer</h3>
+<%= render 'layouts/errors', :object => @answer %>
+<%= form_for [@question, @answer] do |f| %>
+  <%= f.hidden_field :user_id, :value => @question.user_id %>
+  <%= f.label :description %>
+  <%= f.text_field :description %>
+  <%= f.submit %>
+<% end %>
