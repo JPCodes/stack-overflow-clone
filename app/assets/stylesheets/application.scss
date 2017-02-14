@@ -15,3 +15,10 @@
  */
  @import "bootstrap-sprockets";
  @import "bootstrap";
+
+nav ul li {
+    list-style: none;
+    display: inline-block;
+    margin: 0 5px;
+    border: 1px solid #000;
+}
